@@ -1,0 +1,115 @@
+/* Conteneur principal de la bannière */
+.promo-banner {
+    background: linear-gradient(90deg, #ff4d4d, #b30000);
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 600;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  }
+  
+  /* Contenu de la bannière */
+  .promo-banner__content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  /* Texte et bouton défilant */
+  .promo-banner__scroll {
+    display: inline-flex;
+    align-items: center;
+    white-space: nowrap;
+    animation: scrollText 10s linear infinite;
+  }
+  
+  /* Timer mis en évidence */
+  .promo-banner__timer {
+    color: #ffe66d;
+    font-weight: bold;
+    animation: pulse 1s infinite alternate;
+    margin: 0 10px;
+  }
+  
+  /* Bouton Voir les Offres */
+  .promo-banner__button {
+    background-color: #8b0000; /* Rouge foncé */
+    color: #fff;
+    font-weight: bold;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 30px;
+    margin-left: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .promo-banner__button:hover {
+    background-color: #a00000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Animation pour le texte et bouton défilant */
+  @keyframes scrollText {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  
+  /* Animation pour le timer */
+  @keyframes pulse {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+  
+  /* Responsivité */
+  @media (max-width: 768px) {
+    .promo-banner {
+      font-size: 0.9rem;
+    }
+  
+    .promo-banner__timer {
+      font-size: 1rem;
+    }
+  
+    .promo-banner__button {
+      padding: 6px 12px;
+      font-size: 0.9rem;
+    }
+    
+  }
+  /* Bouton Voir les Offres */
+.promo-banner__button {
+    background-color: #8b0000; /* Rouge foncé */
+    color: #fff;
+    font-weight: 600;
+    font-size: 0.85rem; /* Taille ajustée */
+    padding: 6px 12px; /* Dimensions équilibrées */
+    border: none;
+    border-radius: 20px; /* Forme élégante */
+    margin-left: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Ombre légère */
+  }
+  
+  .promo-banner__button:hover {
+    background-color: #a00000;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Ombre plus marquée au survol */}

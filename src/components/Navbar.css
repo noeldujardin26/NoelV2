@@ -1,0 +1,75 @@
+/* Navbar sticky avec animation */
+.sticky-navbar {
+  position: sticky;
+  top: 0;
+  z-index: 998;
+  background: linear-gradient(90deg, #ffffff, #f8f9fa);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  transition: all 0.4s ease;
+  padding: 10px 0;
+}
+
+.sticky-navbar.scrolled {
+  background: #ffffff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  padding: 5px 0;
+}
+
+/* Logo */
+.navbar-logo {
+  height: 60px;
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.navbar-logo:hover {
+  transform: scale(1.1);
+  filter: brightness(1.1);
+}
+
+/* Liens */
+.nav-link {
+  font-size: 1rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  position: relative;
+  padding: 0.5rem 1rem;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-link:hover {
+  color: #e63946;
+  transform: translateY(-2px);
+}
+
+.nav-link::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #e63946;
+  transition: width 0.3s ease, left 0.3s ease;
+}
+
+.nav-link:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+/* Boutons */
+.buttons .btn {
+  background-color: #e63946;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  font-weight: bold;
+  border-radius: 50px;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.buttons .btn:hover {
+  background-color: #c92d2d;
+  transform: translateY(-2px);
+}
